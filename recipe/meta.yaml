@@ -10,7 +10,7 @@ source:
   md5: f81e1e04466048cb022f4fa363bf6fe0
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   script: python -B setup.py install --single-version-externally-managed --record record.txt
 
@@ -21,7 +21,7 @@ requirements:
   - bob.extension
   - bob.blitz
   - bob.core
-  - hdf5
+  - hdf5 1.8.15*
   - cmake
   - pkg-config
   - gcc     # [linux]
@@ -31,7 +31,7 @@ requirements:
   - bob.extension
   - bob.blitz
   - bob.core
-  - hdf5
+  - hdf5 1.8.15*
   - libgcc  # [linux]
 
 test:
