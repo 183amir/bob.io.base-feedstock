@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   skip: true  # [not linux]
-  script: python -B setup.py install --single-version-externally-managed --record record.txt
+  script: MACOSX_DEPLOYMENT_TARGET=10.9 python -B setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
