@@ -4,6 +4,11 @@
 language: objective-c
 
 env:
+  matrix:
+    
+    - CONDA_PY=27
+    - CONDA_PY=34
+    - CONDA_PY=35
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "nF+bBMIhADHHb39V+8FY0unxdnNDr7HfJeFE6G8ii8NZZqCueEN/McobK9EjwxiHpn9zmKmB+ohMk43ODuRdBC2m9GSHpJI3QX3in/U14FujBZizlZnQ1YJrgdRrV+vEgcgMxKDzhr+Fd9mYPI4262/QXtrjS8/2d0W5XcSYx/CYcp8QZ71J3QVdWCYOGk7qBm4jaSqSoa8j0j+iIZECyiPYmbXawHKTaAshNaXWGt9Q6UfaesllKQXyTTxcyK/3uWRMc0nlNAzdMcc3F12FrHcTB4DckAyrqBUGlg6jUOXC+L2+i0hpz1Lcqym4iMxYM4zvNNUQnUILNPDiiKx3YoLpCVOn349/2s1qptav/Uly1DGvr70DfwKqCopmRtT+fTdi6/yJ3PVCRWvhIRlADvHhZXsZYltgOFXBcS4qQi85GnZRmLPcDUVjA/htYQxFKC1NxDjdeqJBO6th6wAud8ck1d21hX5DcDMw5oaP+3tC+fckH84bJkO0McyOf0li8J9T1iQ/tc9E1DqX8Itpo2rvG2T9Ybrkh+KJfG/IHAmqAhUWnfiM+aeNhdAH+W3D72x4g5TDt7W0i/33ukFySVioEHb4Km8gQufh2On7Onku9oMvQTwzX8uDULWIj5OaHk3GIOb3D+7VdlYKFIUytCKmVhgSm0MhhH/1LNUc6ZE="
@@ -21,6 +26,7 @@ install:
 
       export PATH=/Users/travis/miniconda3/bin:$PATH
 
+      conda config --set show_channel_urls true
       conda update --yes conda
       conda install --yes conda-build jinja2 anaconda-client
       conda config --add channels conda-forge
