@@ -10,9 +10,8 @@ source:
   md5: f81e1e04466048cb022f4fa363bf6fe0
 
 build:
-  number: 0
-  skip: true  # [not linux]
-  script: MACOSX_DEPLOYMENT_TARGET=10.9 python -B setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  skip: true  # [win]
 
 requirements:
   build:
