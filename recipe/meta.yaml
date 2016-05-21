@@ -10,7 +10,7 @@ source:
   md5: f81e1e04466048cb022f4fa363bf6fe0
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
@@ -23,6 +23,7 @@ requirements:
   - hdf5 1.8.15*
   - cmake
   - pkg-config
+  - boost 1.60.*
 
   run:
   - python
@@ -30,6 +31,7 @@ requirements:
   - bob.blitz
   - bob.core
   - hdf5 1.8.15*
+  - boost 1.60.*
 
 test:
   imports:
